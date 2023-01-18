@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: g54018.stib.model.dao.StationsDaoTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! - in g54018.stib.model.dao.StationsDaoTest
+testGetExist  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <8014:MADOU>
+	at g54018.stib.model.dao.StationsDaoTest.testGetExist(StationsDaoTest.java:52)
+
+testGetAll  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[8014:MADOU]> but was: <[]>
+	at g54018.stib.model.dao.StationsDaoTest.testGetAll(StationsDaoTest.java:72)
+

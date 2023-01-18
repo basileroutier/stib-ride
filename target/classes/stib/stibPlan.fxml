@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.SearchableComboBox?>
+
+<VBox prefHeight="624.0" prefWidth="891.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stib.view.MainViewController">
+  <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="617.0" prefWidth="891.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fx:id="stibPathImage" fitHeight="281.0" fitWidth="891.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
+            <HBox prefWidth="890.0">
+               <children>
+                  <VBox prefHeight="238.0" prefWidth="478.0">
+                     <children>
+                        <ImageView fx:id="logoStib" fitHeight="92.0" fitWidth="128.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="110.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label fx:id="originLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="364.0" text="Origine : " />
+                        <SearchableComboBox fx:id="origineCombo" prefHeight="26.0" prefWidth="217.0" />
+                        <Label fx:id="destinationLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="358.0" text="Destination :" />
+                        <SearchableComboBox fx:id="destinationCombo" />
+                        <VBox prefHeight="64.0" prefWidth="355.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="358.0" text="Favoris :" />
+                              <HBox prefHeight="38.0" prefWidth="355.0">
+                                 <children>
+                                    <ComboBox fx:id="favoriteCombo" onAction="#favoriteOnClickedCombo" prefHeight="26.0" prefWidth="360.0" />
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="361.0" text="Nom favoris :" />
+                                    <TextField fx:id="nameFavorite" />
+                                 </children>
+                              </VBox>
+                              <HBox prefHeight="38.0" prefWidth="355.0">
+                                 <children>
+                                    <Button fx:id="addFavorite" mnemonicParsing="false" onAction="#addFavoriteHandle" text="Ajouter au favoris" />
+                                    <Button fx:id="delFavorite" mnemonicParsing="false" onAction="#delFavoriteHandle" text="Supprimer favoris" />
+                                    <Button fx:id="modFavorite" mnemonicParsing="false" onAction="#modFavoriteHandle" text="Modifié favoris" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonHandle" text="Search" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="150.0" top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children></VBox>
+                  <TableView fx:id="tablePath" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="238.0" prefWidth="658.0">
+                    <columns>
+                      <TableColumn fx:id="stationTableColumn" prefWidth="272.79994505643845" text="Stations" />
+                      <TableColumn fx:id="ligneTableColumn" prefWidth="262.4000244140625" text="Lignes" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+        </items>
+      </SplitPane>
+      <HBox prefHeight="78.0" prefWidth="891.0">
+         <children>
+            <Label fx:id="searchProgressLabel" prefHeight="30.0" prefWidth="598.0" />
+            <VBox prefHeight="42.0" prefWidth="390.0" />
+            <Label fx:id="searchCountPathResult" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" prefWidth="302.0" />
+         </children>
+      </HBox>
+  </children>
+</VBox>

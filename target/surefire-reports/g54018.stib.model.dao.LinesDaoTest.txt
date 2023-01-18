@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: g54018.stib.model.dao.LinesDaoTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.466 s <<< FAILURE! - in g54018.stib.model.dao.LinesDaoTest
+testGetExist  Time elapsed: 0.355 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <null>
+	at g54018.stib.model.dao.LinesDaoTest.testGetExist(LinesDaoTest.java:51)
+
+testGetAll  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[1]> but was: <[]>
+	at g54018.stib.model.dao.LinesDaoTest.testGetAll(LinesDaoTest.java:71)
+

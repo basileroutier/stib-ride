@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: g54018.stib.model.repository.LinesRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.462 s - in g54018.stib.model.repository.LinesRepositoryTest

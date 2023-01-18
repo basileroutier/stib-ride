@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: g54018.stib.model.dao.StopsDaoTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.029 s <<< FAILURE! - in g54018.stib.model.dao.StopsDaoTest
+testGetExist  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <1:8014:1>
+	at g54018.stib.model.dao.StopsDaoTest.testGetExist(StopsDaoTest.java:53)
+
+testGetAll  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[1:8014:1]> but was: <[]>
+	at g54018.stib.model.dao.StopsDaoTest.testGetAll(StopsDaoTest.java:73)
+
